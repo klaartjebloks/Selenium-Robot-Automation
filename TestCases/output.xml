@@ -1,0 +1,2133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.1 (Python 3.7.2 on win32)" generated="20190531 19:18:21.641" rpa="false">
+<suite id="s1" name="Facebook VriendenFeliciterenVerjaardag" source="C:\Users\Klaar\PycharmProjects\Automation\TestCases\Facebook_VriendenFeliciterenVerjaardag.robot">
+<test id="s1-t1" name="TC Jarigen feliciteren">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1sec</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:18:26.533" endtime="20190531 19:18:26.533"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Facebook openen en inloggen met eigen account gegevens.</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:18:26.534" endtime="20190531 19:18:26.534"></status>
+</kw>
+<kw name="Open browser en login" library="Facebook_Resources">
+<arguments>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<arg>${Email}</arg>
+<arg>${Wachtwoord}</arg>
+</arguments>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1sec</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:18:26.535" endtime="20190531 19:18:26.535"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20190531 19:18:26.535" level="INFO">Opening browser 'Edge' to base url 'http://www.facebook.com'.</msg>
+<status status="PASS" starttime="20190531 19:18:26.535" endtime="20190531 19:18:29.424"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20190531 19:18:29.424" endtime="20190531 19:18:30.457"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>id:email</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:18:30.457" endtime="20190531 19:18:32.889"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:email</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20190531 19:18:32.889" level="INFO">Typing text 'klaartjebloks@gmail.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20190531 19:18:32.889" endtime="20190531 19:18:36.633"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:pass</arg>
+<arg>${wachtwoord}</arg>
+</arguments>
+<msg timestamp="20190531 19:18:36.633" level="INFO">Typing text 'Eindhoven78' into text field 'id:pass'.</msg>
+<status status="PASS" starttime="20190531 19:18:36.633" endtime="20190531 19:18:40.292"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@type='submit']</arg>
+</arguments>
+<msg timestamp="20190531 19:18:40.292" level="INFO">Clicking button 'xpath://input[@type='submit']'.</msg>
+<status status="PASS" starttime="20190531 19:18:40.292" endtime="20190531 19:18:43.549"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:18:26.534" endtime="20190531 19:18:43.550"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Inloggen is gelukt.</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:18:43.551" endtime="20190531 19:18:43.552"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>https://www.facebook.com/events/birthdays/</arg>
+</arguments>
+<msg timestamp="20190531 19:18:43.553" level="INFO">Opening url 'https://www.facebook.com/events/birthdays/'</msg>
+<status status="PASS" starttime="20190531 19:18:43.552" endtime="20190531 19:18:47.309"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Controleren of er vrienden jarig zijn vandaag...</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:18:47.310" endtime="20190531 19:18:47.310"></status>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<doc>Returns number of elements matching ``locator``.</doc>
+<arguments>
+<arg>xpath://div[@id='birthdays_today_card']/following-sibling::div//a[@data-hovercard-prefer-more-content-show='1']</arg>
+</arguments>
+<assign>
+<var>${CountVandaagJarig}</var>
+</assign>
+<msg timestamp="20190531 19:18:48.548" level="INFO">${CountVandaagJarig} = 3</msg>
+<status status="PASS" starttime="20190531 19:18:47.311" endtime="20190531 19:18:48.548"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Aantal jarige vrienden vandaag: ${CountVandaagJarig}</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:18:48.549" endtime="20190531 19:18:48.550"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${CountVandaagJarig}' == '1'</arg>
+<arg>FeliciteerJarigeJob</arg>
+<arg>ELSE IF</arg>
+<arg>'${CountVandaagJarig}' &gt; '1'</arg>
+<arg>FeliciteerIedereen</arg>
+<arg>${CountVandaagJarig}</arg>
+<arg>ELSE</arg>
+<arg>run keyword</arg>
+<arg>NiemandJarig</arg>
+</arguments>
+<kw name="FeliciteerIedereen" library="Facebook_Resources">
+<arguments>
+<arg>${CountVandaagJarig}</arg>
+</arguments>
+<kw name="Count Vandaag Jarig" library="Facebook_Keywords">
+<arguments>
+<arg>${CountVandaagJarig}</arg>
+</arguments>
+<assign>
+<var>${Count_Vandaag_Jarig}</var>
+</assign>
+<msg timestamp="20190531 19:18:48.552" level="INFO">${Count_Vandaag_Jarig} = 3</msg>
+<status status="PASS" starttime="20190531 19:18:48.552" endtime="20190531 19:18:48.552"></status>
+</kw>
+<kw name="CountVandaagJarig Plus1" library="Facebook_Keywords">
+<arguments>
+<arg>${CountVandaagJarig}</arg>
+</arguments>
+<assign>
+<var>${Count_Vandaag_Jarig_plus1}</var>
+</assign>
+<msg timestamp="20190531 19:18:48.553" level="INFO">${Count_Vandaag_Jarig_plus1} = 4</msg>
+<status status="PASS" starttime="20190531 19:18:48.553" endtime="20190531 19:18:48.553"></status>
+</kw>
+<kw name="${i} IN RANGE [ 1 | ${Count_Vandaag_Jarig_plus1} ]" type="for">
+<kw name="${i} = 1" type="foritem">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:(//div[@id='birthdays_today_card']/following-sibling::div//a[@data-hovercard-prefer-more-content-show='1'])[${i}]</arg>
+</arguments>
+<msg timestamp="20190531 19:18:48.553" level="INFO">Clicking link 'xpath:(//div[@id='birthdays_today_card']/following-sibling::div//a[@data-hovercard-prefer-more-content-show='1'])[1]'.</msg>
+<status status="PASS" starttime="20190531 19:18:48.553" endtime="20190531 19:18:51.854"></status>
+</kw>
+<kw name="Bepaal VriendType en Leeftijd" library="Facebook_Resources">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1sec</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:18:51.855" endtime="20190531 19:18:51.855"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[@id='fbProfileCover']//a[@role='button']//i/u</arg>
+</arguments>
+<assign>
+<var>${TypeVriend}</var>
+</assign>
+<msg timestamp="20190531 19:18:54.566" level="INFO">${TypeVriend} = Vriend</msg>
+<status status="PASS" starttime="20190531 19:18:51.855" endtime="20190531 19:18:54.566"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@data-tab-key='about']</arg>
+</arguments>
+<msg timestamp="20190531 19:18:54.567" level="INFO">Clicking link 'xpath://a[@data-tab-key='about']'.</msg>
+<status status="PASS" starttime="20190531 19:18:54.567" endtime="20190531 19:18:58.868"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@data-testid='nav_contact_basic']</arg>
+</arguments>
+<msg timestamp="20190531 19:18:58.869" level="INFO">Clicking link 'xpath://a[@data-testid='nav_contact_basic']'.</msg>
+<status status="PASS" starttime="20190531 19:18:58.868" endtime="20190531 19:19:02.157"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="pagelet_basic"]/div/ul/li[2]/div/div[2]/div/div/span</arg>
+</arguments>
+<assign>
+<var>${Geslacht}</var>
+</assign>
+<msg timestamp="20190531 19:19:04.410" level="INFO">${Geslacht} = Man</msg>
+<status status="PASS" starttime="20190531 19:19:02.157" endtime="20190531 19:19:04.410"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://li/div/div[2]/div/div/span[contains(text(),'1') or contains(text(),'2')]</arg>
+</arguments>
+<assign>
+<var>${Datum}</var>
+</assign>
+<msg timestamp="20190531 19:19:06.631" level="INFO">${Datum} = 31 mei 1996</msg>
+<status status="PASS" starttime="20190531 19:19:04.410" endtime="20190531 19:19:06.631"></status>
+</kw>
+<kw name="Split Datum" library="Facebook_Keywords">
+<arguments>
+<arg>${Datum}</arg>
+</arguments>
+<assign>
+<var>${GeboorteJaar}</var>
+</assign>
+<msg timestamp="20190531 19:19:06.632" level="INFO">${GeboorteJaar} = 1996</msg>
+<status status="PASS" starttime="20190531 19:19:06.631" endtime="20190531 19:19:06.632"></status>
+</kw>
+<kw name="Get Time" library="BuiltIn">
+<doc>Returns the given time in the requested format.</doc>
+<arguments>
+<arg>year</arg>
+<arg>NOW</arg>
+</arguments>
+<assign>
+<var>${SysteemJaar}</var>
+</assign>
+<msg timestamp="20190531 19:19:06.632" level="INFO">${SysteemJaar} = 2019</msg>
+<status status="PASS" starttime="20190531 19:19:06.632" endtime="20190531 19:19:06.632"></status>
+</kw>
+<kw name="Leeftijd Bepalen" library="Facebook_Keywords">
+<arguments>
+<arg>${SysteemJaar}</arg>
+<arg>${GeboorteJaar}</arg>
+</arguments>
+<assign>
+<var>${Leeftijd}</var>
+</assign>
+<msg timestamp="20190531 19:19:06.633" level="INFO">${Leeftijd} = 23</msg>
+<status status="PASS" starttime="20190531 19:19:06.633" endtime="20190531 19:19:06.633"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://span[@data-testid='profile_name_in_profile_page']/a</arg>
+</arguments>
+<assign>
+<var>${Naam}</var>
+</assign>
+<msg timestamp="20190531 19:19:08.841" level="INFO">${Naam} = Nick van Bommel</msg>
+<status status="PASS" starttime="20190531 19:19:06.633" endtime="20190531 19:19:08.841"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${Geslacht}' == 'Man'</arg>
+<arg>log to console</arg>
+<arg>Vandaag is ${Naam} jarig! Hij is een '${TypeVriend}' van jou en wordt ${Leeftijd} jaar.</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Vandaag is ${Naam} jarig! Hij is een '${TypeVriend}' van jou en wordt ${Leeftijd} jaar.</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:08.841" endtime="20190531 19:19:08.842"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:08.841" endtime="20190531 19:19:08.842"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${Geslacht}' == 'Vrouw'</arg>
+<arg>log to console</arg>
+<arg>Vandaag is ${Naam} jarig! Zij is een '${TypeVriend}' van jou en wordt ${Leeftijd} jaar.</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:08.842" endtime="20190531 19:19:08.842"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${Leeftijd}' == '50'</arg>
+<arg>Abraham_Sarah afbeelding uploaden</arg>
+<arg>${Geslacht}</arg>
+<arg>ELSE IF</arg>
+<arg>'${TypeVriend}' == 'Kennis' and '${Leeftijd}' != '50'</arg>
+<arg>run keyword</arg>
+<arg>Standaard afbeelding uploaden</arg>
+<arg>ELSE IF</arg>
+<arg>'${TypeVriend}' == 'Vriend' and '${Leeftijd}' != '50'</arg>
+<arg>run keyword</arg>
+<arg>Algemeen bericht schrijven</arg>
+<arg>ELSE IF</arg>
+<arg>'${TypeVriend}' == 'Goede Vriend' and '${Leeftijd}' != '50'</arg>
+<arg>run keyword</arg>
+<arg>Persoonlijk bericht schrijven</arg>
+<arg>ELSE</arg>
+<arg>run keyword</arg>
+<arg>log</arg>
+<arg>Vriend feliciteren is mislukt.</arg>
+</arguments>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>Algemeen bericht schrijven</arg>
+</arguments>
+<kw name="Algemeen bericht schrijven" library="Facebook_Resources">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1sec</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:08.844" endtime="20190531 19:19:08.844"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@data-tab-key='timeline']</arg>
+</arguments>
+<msg timestamp="20190531 19:19:08.844" level="INFO">Clicking link 'xpath://a[@data-tab-key='timeline']'.</msg>
+<status status="PASS" starttime="20190531 19:19:08.844" endtime="20190531 19:19:13.219"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[@data-contents='true']</arg>
+</arguments>
+<msg timestamp="20190531 19:19:13.219" level="INFO">Clicking element 'xpath://div[@data-contents='true']'.</msg>
+<status status="PASS" starttime="20190531 19:19:13.219" endtime="20190531 19:19:15.649"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>xpath://div[@role='textbox']</arg>
+<arg>Van harte gefeliciteerd met je verjaardag!</arg>
+</arguments>
+<msg timestamp="20190531 19:19:15.652" level="INFO">Sending key(s) ('Van harte gefeliciteerd met je verjaardag!',) to xpath://div[@role='textbox'] element.</msg>
+<msg timestamp="20190531 19:19:16.862" level="INFO">Sending keys Van harte gefeliciteerd met je verjaardag!</msg>
+<status status="PASS" starttime="20190531 19:19:15.650" endtime="20190531 19:19:19.802"></status>
+</kw>
+<kw name="Press Key" library="SeleniumLibrary">
+<doc>Deprecated use `Press Keys` instead.</doc>
+<arguments>
+<arg>xpath://div[@role='textbox']</arg>
+<arg>\\32</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:19.802" endtime="20190531 19:19:22.239"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@data-tooltip-content='Voeg een emoji toe']</arg>
+</arguments>
+<msg timestamp="20190531 19:19:22.239" level="INFO">Clicking link 'xpath://a[@data-tooltip-content='Voeg een emoji toe']'.</msg>
+<status status="PASS" starttime="20190531 19:19:22.239" endtime="20190531 19:19:26.608"></status>
+</kw>
+<kw name="Click Image" library="SeleniumLibrary">
+<doc>Clicks an image identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://img[@src='https://static.xx.fbcdn.net/images/emoji.php/v9/t4e/1/28/1f973.png']</arg>
+</arguments>
+<msg timestamp="20190531 19:19:26.609" level="INFO">Clicking image 'xpath://img[@src='https://static.xx.fbcdn.net/images/emoji.php/v9/t4e/1/28/1f973.png']'.</msg>
+<status status="PASS" starttime="20190531 19:19:26.608" endtime="20190531 19:19:30.083"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[@role='textbox']</arg>
+</arguments>
+<msg timestamp="20190531 19:19:30.083" level="INFO">Clicking element 'xpath://div[@role='textbox']'.</msg>
+<status status="PASS" starttime="20190531 19:19:30.083" endtime="20190531 19:19:32.359"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://i[@class='_3ov1 img sp_j-uVEp6OsLM sx_1894ca']</arg>
+</arguments>
+<msg timestamp="20190531 19:19:32.359" level="INFO">Clicking element 'xpath://i[@class='_3ov1 img sp_j-uVEp6OsLM sx_1894ca']'.</msg>
+<status status="PASS" starttime="20190531 19:19:32.359" endtime="20190531 19:19:34.628"></status>
+</kw>
+<kw name="Get Time" library="BuiltIn">
+<doc>Returns the given time in the requested format.</doc>
+<arguments>
+<arg>sec</arg>
+<arg>NOW</arg>
+</arguments>
+<assign>
+<var>${system_sec}</var>
+</assign>
+<msg timestamp="20190531 19:19:34.629" level="INFO">${system_sec} = 34</msg>
+<status status="PASS" starttime="20190531 19:19:34.628" endtime="20190531 19:19:34.629"></status>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>'${system_sec}' == '01'</arg>
+<arg>1</arg>
+<arg>'${system_sec}' == '02'</arg>
+<arg>2</arg>
+<arg>'${system_sec}' == '03'</arg>
+<arg>3</arg>
+<arg>'${system_sec}' == '04'</arg>
+<arg>4</arg>
+<arg>'${system_sec}' == '05'</arg>
+<arg>5</arg>
+<arg>'${system_sec}' == '06'</arg>
+<arg>6</arg>
+<arg>'${system_sec}' == '07'</arg>
+<arg>7</arg>
+<arg>'${system_sec}' == '08'</arg>
+<arg>8</arg>
+<arg>'${system_sec}' == '09'</arg>
+<arg>9</arg>
+</arguments>
+<assign>
+<var>${sec}</var>
+</assign>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>'${system_sec}' == '02'</arg>
+<arg>2</arg>
+<arg>'${system_sec}' == '03'</arg>
+<arg>3</arg>
+<arg>'${system_sec}' == '04'</arg>
+<arg>4</arg>
+<arg>'${system_sec}' == '05'</arg>
+<arg>5</arg>
+<arg>'${system_sec}' == '06'</arg>
+<arg>6</arg>
+<arg>'${system_sec}' == '07'</arg>
+<arg>7</arg>
+<arg>'${system_sec}' == '08'</arg>
+<arg>8</arg>
+<arg>'${system_sec}' == '09'</arg>
+<arg>9</arg>
+</arguments>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>'${system_sec}' == '03'</arg>
+<arg>3</arg>
+<arg>'${system_sec}' == '04'</arg>
+<arg>4</arg>
+<arg>'${system_sec}' == '05'</arg>
+<arg>5</arg>
+<arg>'${system_sec}' == '06'</arg>
+<arg>6</arg>
+<arg>'${system_sec}' == '07'</arg>
+<arg>7</arg>
+<arg>'${system_sec}' == '08'</arg>
+<arg>8</arg>
+<arg>'${system_sec}' == '09'</arg>
+<arg>9</arg>
+</arguments>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>'${system_sec}' == '04'</arg>
+<arg>4</arg>
+<arg>'${system_sec}' == '05'</arg>
+<arg>5</arg>
+<arg>'${system_sec}' == '06'</arg>
+<arg>6</arg>
+<arg>'${system_sec}' == '07'</arg>
+<arg>7</arg>
+<arg>'${system_sec}' == '08'</arg>
+<arg>8</arg>
+<arg>'${system_sec}' == '09'</arg>
+<arg>9</arg>
+</arguments>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>'${system_sec}' == '05'</arg>
+<arg>5</arg>
+<arg>'${system_sec}' == '06'</arg>
+<arg>6</arg>
+<arg>'${system_sec}' == '07'</arg>
+<arg>7</arg>
+<arg>'${system_sec}' == '08'</arg>
+<arg>8</arg>
+<arg>'${system_sec}' == '09'</arg>
+<arg>9</arg>
+</arguments>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>'${system_sec}' == '06'</arg>
+<arg>6</arg>
+<arg>'${system_sec}' == '07'</arg>
+<arg>7</arg>
+<arg>'${system_sec}' == '08'</arg>
+<arg>8</arg>
+<arg>'${system_sec}' == '09'</arg>
+<arg>9</arg>
+</arguments>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>'${system_sec}' == '07'</arg>
+<arg>7</arg>
+<arg>'${system_sec}' == '08'</arg>
+<arg>8</arg>
+<arg>'${system_sec}' == '09'</arg>
+<arg>9</arg>
+</arguments>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>'${system_sec}' == '08'</arg>
+<arg>8</arg>
+<arg>'${system_sec}' == '09'</arg>
+<arg>9</arg>
+</arguments>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>'${system_sec}' == '09'</arg>
+<arg>9</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:34.632" endtime="20190531 19:19:34.632"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.632" endtime="20190531 19:19:34.632"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.631" endtime="20190531 19:19:34.632"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.631" endtime="20190531 19:19:34.632"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.631" endtime="20190531 19:19:34.633"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.630" endtime="20190531 19:19:34.633"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.630" endtime="20190531 19:19:34.633"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.630" endtime="20190531 19:19:34.633"></status>
+</kw>
+<msg timestamp="20190531 19:19:34.633" level="INFO">${sec} = None</msg>
+<status status="PASS" starttime="20190531 19:19:34.629" endtime="20190531 19:19:34.633"></status>
+</kw>
+<kw name="${i} IN RANGE [ 1 | 10 ]" type="for">
+<kw name="${i} = 1" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[2]/td[3]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:34.633" endtime="20190531 19:19:34.634"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.633" endtime="20190531 19:19:34.634"></status>
+</kw>
+<kw name="${i} = 2" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[2]/td[3]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:34.634" endtime="20190531 19:19:34.634"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.634" endtime="20190531 19:19:34.634"></status>
+</kw>
+<kw name="${i} = 3" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[2]/td[3]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:34.634" endtime="20190531 19:19:34.634"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.634" endtime="20190531 19:19:34.634"></status>
+</kw>
+<kw name="${i} = 4" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[2]/td[3]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:34.635" endtime="20190531 19:19:34.635"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.634" endtime="20190531 19:19:34.635"></status>
+</kw>
+<kw name="${i} = 5" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[2]/td[3]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:34.635" endtime="20190531 19:19:34.635"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.635" endtime="20190531 19:19:34.635"></status>
+</kw>
+<kw name="${i} = 6" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[2]/td[3]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:34.636" endtime="20190531 19:19:34.636"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.636" endtime="20190531 19:19:34.636"></status>
+</kw>
+<kw name="${i} = 7" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[2]/td[3]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:34.636" endtime="20190531 19:19:34.636"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.636" endtime="20190531 19:19:34.636"></status>
+</kw>
+<kw name="${i} = 8" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[2]/td[3]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:34.636" endtime="20190531 19:19:34.637"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.636" endtime="20190531 19:19:34.637"></status>
+</kw>
+<kw name="${i} = 9" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[2]/td[3]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:34.637" endtime="20190531 19:19:34.637"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.637" endtime="20190531 19:19:34.637"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.633" endtime="20190531 19:19:34.637"></status>
+</kw>
+<kw name="${i} IN RANGE [ 10 | 20 ]" type="for">
+<kw name="${i} = 10" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[3]/td[2]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:34.638" endtime="20190531 19:19:34.638"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.637" endtime="20190531 19:19:34.638"></status>
+</kw>
+<kw name="${i} = 11" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[3]/td[2]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:34.638" endtime="20190531 19:19:34.638"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.638" endtime="20190531 19:19:34.638"></status>
+</kw>
+<kw name="${i} = 12" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[3]/td[2]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:34.638" endtime="20190531 19:19:34.639"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.638" endtime="20190531 19:19:34.639"></status>
+</kw>
+<kw name="${i} = 13" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[3]/td[2]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:34.639" endtime="20190531 19:19:34.639"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.639" endtime="20190531 19:19:34.639"></status>
+</kw>
+<kw name="${i} = 14" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[3]/td[2]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:34.639" endtime="20190531 19:19:34.640"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.639" endtime="20190531 19:19:34.640"></status>
+</kw>
+<kw name="${i} = 15" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[3]/td[2]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:34.640" endtime="20190531 19:19:34.640"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.640" endtime="20190531 19:19:34.640"></status>
+</kw>
+<kw name="${i} = 16" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[3]/td[2]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:34.640" endtime="20190531 19:19:34.640"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.640" endtime="20190531 19:19:34.640"></status>
+</kw>
+<kw name="${i} = 17" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[3]/td[2]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:34.641" endtime="20190531 19:19:34.641"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.640" endtime="20190531 19:19:34.641"></status>
+</kw>
+<kw name="${i} = 18" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[3]/td[2]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:34.641" endtime="20190531 19:19:34.641"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.641" endtime="20190531 19:19:34.641"></status>
+</kw>
+<kw name="${i} = 19" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[3]/td[2]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:34.642" endtime="20190531 19:19:34.642"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.641" endtime="20190531 19:19:34.642"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.637" endtime="20190531 19:19:34.642"></status>
+</kw>
+<kw name="${i} IN RANGE [ 20 | 30 ]" type="for">
+<kw name="${i} = 20" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[8]/td[4]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:34.642" endtime="20190531 19:19:34.642"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.642" endtime="20190531 19:19:34.642"></status>
+</kw>
+<kw name="${i} = 21" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[8]/td[4]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:34.643" endtime="20190531 19:19:34.643"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.642" endtime="20190531 19:19:34.643"></status>
+</kw>
+<kw name="${i} = 22" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[8]/td[4]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:34.643" endtime="20190531 19:19:34.643"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.643" endtime="20190531 19:19:34.643"></status>
+</kw>
+<kw name="${i} = 23" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[8]/td[4]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:34.643" endtime="20190531 19:19:34.644"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.643" endtime="20190531 19:19:34.644"></status>
+</kw>
+<kw name="${i} = 24" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[8]/td[4]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:34.644" endtime="20190531 19:19:34.644"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.644" endtime="20190531 19:19:34.644"></status>
+</kw>
+<kw name="${i} = 25" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[8]/td[4]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:34.644" endtime="20190531 19:19:34.645"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.644" endtime="20190531 19:19:34.645"></status>
+</kw>
+<kw name="${i} = 26" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[8]/td[4]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:34.645" endtime="20190531 19:19:34.645"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.645" endtime="20190531 19:19:34.645"></status>
+</kw>
+<kw name="${i} = 27" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[8]/td[4]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:34.645" endtime="20190531 19:19:34.645"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.645" endtime="20190531 19:19:34.646"></status>
+</kw>
+<kw name="${i} = 28" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[8]/td[4]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:34.646" endtime="20190531 19:19:34.646"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.646" endtime="20190531 19:19:34.646"></status>
+</kw>
+<kw name="${i} = 29" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[8]/td[4]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:34.646" endtime="20190531 19:19:34.646"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.646" endtime="20190531 19:19:34.646"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.642" endtime="20190531 19:19:34.646"></status>
+</kw>
+<kw name="${i} IN RANGE [ 30 | 40 ]" type="for">
+<kw name="${i} = 30" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[8]/td[5]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:34.647" endtime="20190531 19:19:34.647"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.647" endtime="20190531 19:19:34.647"></status>
+</kw>
+<kw name="${i} = 31" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[8]/td[5]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:34.647" endtime="20190531 19:19:34.647"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.647" endtime="20190531 19:19:34.647"></status>
+</kw>
+<kw name="${i} = 32" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[8]/td[5]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:34.647" endtime="20190531 19:19:34.648"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.647" endtime="20190531 19:19:34.648"></status>
+</kw>
+<kw name="${i} = 33" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[8]/td[5]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:34.648" endtime="20190531 19:19:34.648"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.648" endtime="20190531 19:19:34.648"></status>
+</kw>
+<kw name="${i} = 34" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[8]/td[5]/div/a/div</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div/div[3]/div[3]/table/tbody/tr[8]/td[5]/div/a/div</arg>
+</arguments>
+<msg timestamp="20190531 19:19:34.649" level="INFO">Clicking element '//div/div[3]/div[3]/table/tbody/tr[8]/td[5]/div/a/div'.</msg>
+<status status="PASS" starttime="20190531 19:19:34.649" endtime="20190531 19:19:36.927"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.648" endtime="20190531 19:19:36.927"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.648" endtime="20190531 19:19:36.927"></status>
+</kw>
+<kw name="${i} = 35" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[8]/td[5]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:36.927" endtime="20190531 19:19:36.928"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:36.927" endtime="20190531 19:19:36.928"></status>
+</kw>
+<kw name="${i} = 36" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[8]/td[5]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:36.928" endtime="20190531 19:19:36.928"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:36.928" endtime="20190531 19:19:36.928"></status>
+</kw>
+<kw name="${i} = 37" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[8]/td[5]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:36.929" endtime="20190531 19:19:36.929"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:36.928" endtime="20190531 19:19:36.929"></status>
+</kw>
+<kw name="${i} = 38" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[8]/td[5]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:36.929" endtime="20190531 19:19:36.929"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:36.929" endtime="20190531 19:19:36.929"></status>
+</kw>
+<kw name="${i} = 39" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[8]/td[5]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:36.930" endtime="20190531 19:19:36.930"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:36.929" endtime="20190531 19:19:36.930"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:34.646" endtime="20190531 19:19:36.930"></status>
+</kw>
+<kw name="${i} IN RANGE [ 40 | 50 ]" type="for">
+<kw name="${i} = 40" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[9]/td[1]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:36.930" endtime="20190531 19:19:36.931"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:36.930" endtime="20190531 19:19:36.931"></status>
+</kw>
+<kw name="${i} = 41" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[9]/td[1]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:36.931" endtime="20190531 19:19:36.931"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:36.931" endtime="20190531 19:19:36.931"></status>
+</kw>
+<kw name="${i} = 42" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[9]/td[1]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:36.931" endtime="20190531 19:19:36.931"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:36.931" endtime="20190531 19:19:36.931"></status>
+</kw>
+<kw name="${i} = 43" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[9]/td[1]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:36.932" endtime="20190531 19:19:36.932"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:36.931" endtime="20190531 19:19:36.932"></status>
+</kw>
+<kw name="${i} = 44" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[9]/td[1]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:36.932" endtime="20190531 19:19:36.932"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:36.932" endtime="20190531 19:19:36.932"></status>
+</kw>
+<kw name="${i} = 45" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[9]/td[1]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:36.933" endtime="20190531 19:19:36.933"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:36.932" endtime="20190531 19:19:36.933"></status>
+</kw>
+<kw name="${i} = 46" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[9]/td[1]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:36.933" endtime="20190531 19:19:36.933"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:36.933" endtime="20190531 19:19:36.933"></status>
+</kw>
+<kw name="${i} = 47" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[9]/td[1]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:36.933" endtime="20190531 19:19:36.934"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:36.933" endtime="20190531 19:19:36.934"></status>
+</kw>
+<kw name="${i} = 48" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[9]/td[1]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:36.934" endtime="20190531 19:19:36.934"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:36.934" endtime="20190531 19:19:36.934"></status>
+</kw>
+<kw name="${i} = 49" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[9]/td[1]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:36.934" endtime="20190531 19:19:36.935"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:36.934" endtime="20190531 19:19:36.935"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:36.930" endtime="20190531 19:19:36.935"></status>
+</kw>
+<kw name="${i} IN RANGE [ 50 | 60 ]" type="for">
+<kw name="${i} = 50" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[9]/td[2]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:36.935" endtime="20190531 19:19:36.935"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:36.935" endtime="20190531 19:19:36.935"></status>
+</kw>
+<kw name="${i} = 51" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[9]/td[2]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:36.935" endtime="20190531 19:19:36.936"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:36.935" endtime="20190531 19:19:36.936"></status>
+</kw>
+<kw name="${i} = 52" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[9]/td[2]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:36.936" endtime="20190531 19:19:36.936"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:36.936" endtime="20190531 19:19:36.936"></status>
+</kw>
+<kw name="${i} = 53" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[9]/td[2]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:36.936" endtime="20190531 19:19:36.937"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:36.936" endtime="20190531 19:19:36.937"></status>
+</kw>
+<kw name="${i} = 54" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[9]/td[2]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:36.937" endtime="20190531 19:19:36.937"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:36.937" endtime="20190531 19:19:36.937"></status>
+</kw>
+<kw name="${i} = 55" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[9]/td[2]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:36.937" endtime="20190531 19:19:36.937"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:36.937" endtime="20190531 19:19:36.937"></status>
+</kw>
+<kw name="${i} = 56" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[9]/td[2]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:36.938" endtime="20190531 19:19:36.938"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:36.938" endtime="20190531 19:19:36.938"></status>
+</kw>
+<kw name="${i} = 57" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[9]/td[2]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:36.938" endtime="20190531 19:19:36.938"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:36.938" endtime="20190531 19:19:36.938"></status>
+</kw>
+<kw name="${i} = 58" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[9]/td[2]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:36.938" endtime="20190531 19:19:36.939"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:36.938" endtime="20190531 19:19:36.939"></status>
+</kw>
+<kw name="${i} = 59" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${i}' == '${system_sec}'</arg>
+<arg>click element</arg>
+<arg>//div/div[3]/div[3]/table/tbody/tr[9]/td[2]/div/a/div</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:36.939" endtime="20190531 19:19:36.939"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:36.939" endtime="20190531 19:19:36.939"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:36.935" endtime="20190531 19:19:36.939"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[@role='textbox']</arg>
+</arguments>
+<msg timestamp="20190531 19:19:36.940" level="INFO">Clicking element 'xpath://div[@role='textbox']'.</msg>
+<status status="PASS" starttime="20190531 19:19:36.939" endtime="20190531 19:19:39.197"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://button[.='Plaatsen']</arg>
+</arguments>
+<msg timestamp="20190531 19:19:39.197" level="INFO">Clicking button 'xpath://button[.='Plaatsen']'.</msg>
+<status status="PASS" starttime="20190531 19:19:39.197" endtime="20190531 19:19:46.660"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Algemeen bericht voor de jarige is succesvol geplaatst.</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:46.660" endtime="20190531 19:19:46.660"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>Algemeen bericht voor de jarige is succesvol geplaatst.</arg>
+</arguments>
+<msg timestamp="20190531 19:19:46.661" level="INFO">Algemeen bericht voor de jarige is succesvol geplaatst.</msg>
+<status status="PASS" starttime="20190531 19:19:46.661" endtime="20190531 19:19:46.661"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:08.843" endtime="20190531 19:19:46.661"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:08.843" endtime="20190531 19:19:46.661"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:08.842" endtime="20190531 19:19:46.661"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:18:51.854" endtime="20190531 19:19:46.661"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Vriend ${i} van ${Count_Vandaag_Jarig} is gefeliciteerd.</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:46.662" endtime="20190531 19:19:46.663"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>Vriend ${i} van ${Count_Vandaag_Jarig} is gefeliciteerd.</arg>
+</arguments>
+<msg timestamp="20190531 19:19:46.663" level="INFO">Vriend 1 van 3 is gefeliciteerd.</msg>
+<status status="PASS" starttime="20190531 19:19:46.663" endtime="20190531 19:19:46.663"></status>
+</kw>
+<kw name="Evenementen Verjaardagen" library="Facebook_Resources">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1sec</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:19:46.664" endtime="20190531 19:19:46.664"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@data-tab-key='about']</arg>
+</arguments>
+<msg timestamp="20190531 19:19:46.665" level="INFO">Clicking link 'xpath://a[@data-tab-key='about']'.</msg>
+<status status="PASS" starttime="20190531 19:19:46.664" endtime="20190531 19:19:51.067"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@data-testid='nav_contact_basic']</arg>
+</arguments>
+<msg timestamp="20190531 19:19:51.067" level="INFO">Clicking link 'xpath://a[@data-testid='nav_contact_basic']'.</msg>
+<status status="PASS" starttime="20190531 19:19:51.067" endtime="20190531 19:19:54.353"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@title='Ga naar de Facebook-startpagina']</arg>
+</arguments>
+<msg timestamp="20190531 19:19:54.354" level="INFO">Clicking link 'xpath://a[@title='Ga naar de Facebook-startpagina']'.</msg>
+<status status="PASS" starttime="20190531 19:19:54.353" endtime="20190531 19:19:57.632"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@data-testid='left_nav_item_Evenementen']</arg>
+</arguments>
+<msg timestamp="20190531 19:19:57.632" level="INFO">Clicking link 'xpath://a[@data-testid='left_nav_item_Evenementen']'.</msg>
+<status status="PASS" starttime="20190531 19:19:57.632" endtime="20190531 19:20:01.300"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[@data-key='birthdays']/a</arg>
+</arguments>
+<msg timestamp="20190531 19:20:01.300" level="INFO">Clicking link 'xpath://div[@data-key='birthdays']/a'.</msg>
+<status status="PASS" starttime="20190531 19:20:01.300" endtime="20190531 19:20:04.614"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:19:46.663" endtime="20190531 19:20:04.614"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:18:48.553" endtime="20190531 19:20:04.614"></status>
+</kw>
+<kw name="${i} = 2" type="foritem">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:(//div[@id='birthdays_today_card']/following-sibling::div//a[@data-hovercard-prefer-more-content-show='1'])[${i}]</arg>
+</arguments>
+<msg timestamp="20190531 19:20:04.615" level="INFO">Clicking link 'xpath:(//div[@id='birthdays_today_card']/following-sibling::div//a[@data-hovercard-prefer-more-content-show='1'])[2]'.</msg>
+<status status="PASS" starttime="20190531 19:20:04.614" endtime="20190531 19:20:07.895"></status>
+</kw>
+<kw name="Bepaal VriendType en Leeftijd" library="Facebook_Resources">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1sec</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:20:07.895" endtime="20190531 19:20:07.896"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[@id='fbProfileCover']//a[@role='button']//i/u</arg>
+</arguments>
+<assign>
+<var>${TypeVriend}</var>
+</assign>
+<msg timestamp="20190531 19:20:10.290" level="INFO">${TypeVriend} = Kennis</msg>
+<status status="PASS" starttime="20190531 19:20:07.896" endtime="20190531 19:20:10.290"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@data-tab-key='about']</arg>
+</arguments>
+<msg timestamp="20190531 19:20:10.290" level="INFO">Clicking link 'xpath://a[@data-tab-key='about']'.</msg>
+<status status="PASS" starttime="20190531 19:20:10.290" endtime="20190531 19:20:14.616"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@data-testid='nav_contact_basic']</arg>
+</arguments>
+<msg timestamp="20190531 19:20:14.617" level="INFO">Clicking link 'xpath://a[@data-testid='nav_contact_basic']'.</msg>
+<status status="PASS" starttime="20190531 19:20:14.617" endtime="20190531 19:20:17.904"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="pagelet_basic"]/div/ul/li[2]/div/div[2]/div/div/span</arg>
+</arguments>
+<assign>
+<var>${Geslacht}</var>
+</assign>
+<msg timestamp="20190531 19:20:20.132" level="INFO">${Geslacht} = Man</msg>
+<status status="PASS" starttime="20190531 19:20:17.904" endtime="20190531 19:20:20.132"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://li/div/div[2]/div/div/span[contains(text(),'1') or contains(text(),'2')]</arg>
+</arguments>
+<assign>
+<var>${Datum}</var>
+</assign>
+<msg timestamp="20190531 19:20:22.362" level="INFO">${Datum} = 31 mei 1991</msg>
+<status status="PASS" starttime="20190531 19:20:20.132" endtime="20190531 19:20:22.362"></status>
+</kw>
+<kw name="Split Datum" library="Facebook_Keywords">
+<arguments>
+<arg>${Datum}</arg>
+</arguments>
+<assign>
+<var>${GeboorteJaar}</var>
+</assign>
+<msg timestamp="20190531 19:20:22.363" level="INFO">${GeboorteJaar} = 1991</msg>
+<status status="PASS" starttime="20190531 19:20:22.362" endtime="20190531 19:20:22.363"></status>
+</kw>
+<kw name="Get Time" library="BuiltIn">
+<doc>Returns the given time in the requested format.</doc>
+<arguments>
+<arg>year</arg>
+<arg>NOW</arg>
+</arguments>
+<assign>
+<var>${SysteemJaar}</var>
+</assign>
+<msg timestamp="20190531 19:20:22.363" level="INFO">${SysteemJaar} = 2019</msg>
+<status status="PASS" starttime="20190531 19:20:22.363" endtime="20190531 19:20:22.363"></status>
+</kw>
+<kw name="Leeftijd Bepalen" library="Facebook_Keywords">
+<arguments>
+<arg>${SysteemJaar}</arg>
+<arg>${GeboorteJaar}</arg>
+</arguments>
+<assign>
+<var>${Leeftijd}</var>
+</assign>
+<msg timestamp="20190531 19:20:22.363" level="INFO">${Leeftijd} = 28</msg>
+<status status="PASS" starttime="20190531 19:20:22.363" endtime="20190531 19:20:22.363"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://span[@data-testid='profile_name_in_profile_page']/a</arg>
+</arguments>
+<assign>
+<var>${Naam}</var>
+</assign>
+<msg timestamp="20190531 19:20:24.584" level="INFO">${Naam} = Lars Rutten</msg>
+<status status="PASS" starttime="20190531 19:20:22.364" endtime="20190531 19:20:24.584"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${Geslacht}' == 'Man'</arg>
+<arg>log to console</arg>
+<arg>Vandaag is ${Naam} jarig! Hij is een '${TypeVriend}' van jou en wordt ${Leeftijd} jaar.</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Vandaag is ${Naam} jarig! Hij is een '${TypeVriend}' van jou en wordt ${Leeftijd} jaar.</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:20:24.584" endtime="20190531 19:20:24.585"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:20:24.584" endtime="20190531 19:20:24.585"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${Geslacht}' == 'Vrouw'</arg>
+<arg>log to console</arg>
+<arg>Vandaag is ${Naam} jarig! Zij is een '${TypeVriend}' van jou en wordt ${Leeftijd} jaar.</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:20:24.585" endtime="20190531 19:20:24.585"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${Leeftijd}' == '50'</arg>
+<arg>Abraham_Sarah afbeelding uploaden</arg>
+<arg>${Geslacht}</arg>
+<arg>ELSE IF</arg>
+<arg>'${TypeVriend}' == 'Kennis' and '${Leeftijd}' != '50'</arg>
+<arg>run keyword</arg>
+<arg>Standaard afbeelding uploaden</arg>
+<arg>ELSE IF</arg>
+<arg>'${TypeVriend}' == 'Vriend' and '${Leeftijd}' != '50'</arg>
+<arg>run keyword</arg>
+<arg>Algemeen bericht schrijven</arg>
+<arg>ELSE IF</arg>
+<arg>'${TypeVriend}' == 'Goede Vriend' and '${Leeftijd}' != '50'</arg>
+<arg>run keyword</arg>
+<arg>Persoonlijk bericht schrijven</arg>
+<arg>ELSE</arg>
+<arg>run keyword</arg>
+<arg>log</arg>
+<arg>Vriend feliciteren is mislukt.</arg>
+</arguments>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>Standaard afbeelding uploaden</arg>
+</arguments>
+<kw name="Standaard afbeelding uploaden" library="Facebook_Resources">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1sec</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:20:24.587" endtime="20190531 19:20:24.587"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@data-tab-key='timeline']</arg>
+</arguments>
+<msg timestamp="20190531 19:20:24.587" level="INFO">Clicking link 'xpath://a[@data-tab-key='timeline']'.</msg>
+<status status="PASS" starttime="20190531 19:20:24.587" endtime="20190531 19:20:29.008"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[@data-contents='true']</arg>
+</arguments>
+<msg timestamp="20190531 19:20:29.008" level="INFO">Clicking element 'xpath://div[@data-contents='true']'.</msg>
+<status status="PASS" starttime="20190531 19:20:29.008" endtime="20190531 19:20:31.447"></status>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<doc>Inputs the ``file_path`` into file input field ``locator``.</doc>
+<arguments>
+<arg>//input[@name='composer_photo[]']</arg>
+<arg>C://Users/Klaar/OneDrive/Bureaublad/Facebook_Scripts/FB_Gefeliciteerd.jpg</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:20:31.447" endtime="20190531 19:20:33.920"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>30sec</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:20:33.920" endtime="20190531 19:20:34.927"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://button[.='Plaatsen']</arg>
+</arguments>
+<msg timestamp="20190531 19:20:34.927" level="INFO">Clicking button 'xpath://button[.='Plaatsen']'.</msg>
+<status status="PASS" starttime="20190531 19:20:34.927" endtime="20190531 19:20:42.409"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Standaard afbeelding voor de jarige is succesvol geplaatst.</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:20:42.409" endtime="20190531 19:20:42.410"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>Standaard afbeelding voor de jarige is succesvol geplaatst.</arg>
+</arguments>
+<msg timestamp="20190531 19:20:42.410" level="INFO">Standaard afbeelding voor de jarige is succesvol geplaatst.</msg>
+<status status="PASS" starttime="20190531 19:20:42.410" endtime="20190531 19:20:42.410"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:20:24.586" endtime="20190531 19:20:42.410"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:20:24.586" endtime="20190531 19:20:42.410"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:20:24.585" endtime="20190531 19:20:42.410"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:20:07.895" endtime="20190531 19:20:42.410"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Vriend ${i} van ${Count_Vandaag_Jarig} is gefeliciteerd.</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:20:42.410" endtime="20190531 19:20:42.411"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>Vriend ${i} van ${Count_Vandaag_Jarig} is gefeliciteerd.</arg>
+</arguments>
+<msg timestamp="20190531 19:20:42.411" level="INFO">Vriend 2 van 3 is gefeliciteerd.</msg>
+<status status="PASS" starttime="20190531 19:20:42.411" endtime="20190531 19:20:42.411"></status>
+</kw>
+<kw name="Evenementen Verjaardagen" library="Facebook_Resources">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1sec</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:20:42.412" endtime="20190531 19:20:42.412"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@data-tab-key='about']</arg>
+</arguments>
+<msg timestamp="20190531 19:20:42.412" level="INFO">Clicking link 'xpath://a[@data-tab-key='about']'.</msg>
+<status status="PASS" starttime="20190531 19:20:42.412" endtime="20190531 19:20:46.805"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@data-testid='nav_contact_basic']</arg>
+</arguments>
+<msg timestamp="20190531 19:20:46.805" level="INFO">Clicking link 'xpath://a[@data-testid='nav_contact_basic']'.</msg>
+<status status="PASS" starttime="20190531 19:20:46.805" endtime="20190531 19:20:50.100"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@title='Ga naar de Facebook-startpagina']</arg>
+</arguments>
+<msg timestamp="20190531 19:20:50.101" level="INFO">Clicking link 'xpath://a[@title='Ga naar de Facebook-startpagina']'.</msg>
+<status status="PASS" starttime="20190531 19:20:50.101" endtime="20190531 19:20:53.432"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@data-testid='left_nav_item_Evenementen']</arg>
+</arguments>
+<msg timestamp="20190531 19:20:53.433" level="INFO">Clicking link 'xpath://a[@data-testid='left_nav_item_Evenementen']'.</msg>
+<status status="PASS" starttime="20190531 19:20:53.433" endtime="20190531 19:20:56.863"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[@data-key='birthdays']/a</arg>
+</arguments>
+<msg timestamp="20190531 19:20:56.863" level="INFO">Clicking link 'xpath://div[@data-key='birthdays']/a'.</msg>
+<status status="PASS" starttime="20190531 19:20:56.863" endtime="20190531 19:21:00.261"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:20:42.411" endtime="20190531 19:21:00.261"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:20:04.614" endtime="20190531 19:21:00.261"></status>
+</kw>
+<kw name="${i} = 3" type="foritem">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:(//div[@id='birthdays_today_card']/following-sibling::div//a[@data-hovercard-prefer-more-content-show='1'])[${i}]</arg>
+</arguments>
+<msg timestamp="20190531 19:21:00.261" level="INFO">Clicking link 'xpath:(//div[@id='birthdays_today_card']/following-sibling::div//a[@data-hovercard-prefer-more-content-show='1'])[3]'.</msg>
+<status status="PASS" starttime="20190531 19:21:00.261" endtime="20190531 19:21:04.276"></status>
+</kw>
+<kw name="Bepaal VriendType en Leeftijd" library="Facebook_Resources">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1sec</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:21:04.277" endtime="20190531 19:21:04.277"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[@id='fbProfileCover']//a[@role='button']//i/u</arg>
+</arguments>
+<assign>
+<var>${TypeVriend}</var>
+</assign>
+<msg timestamp="20190531 19:21:06.821" level="INFO">${TypeVriend} = Vriend</msg>
+<status status="PASS" starttime="20190531 19:21:04.277" endtime="20190531 19:21:06.821"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@data-tab-key='about']</arg>
+</arguments>
+<msg timestamp="20190531 19:21:06.821" level="INFO">Clicking link 'xpath://a[@data-tab-key='about']'.</msg>
+<status status="PASS" starttime="20190531 19:21:06.821" endtime="20190531 19:21:11.141"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@data-testid='nav_contact_basic']</arg>
+</arguments>
+<msg timestamp="20190531 19:21:11.142" level="INFO">Clicking link 'xpath://a[@data-testid='nav_contact_basic']'.</msg>
+<status status="PASS" starttime="20190531 19:21:11.141" endtime="20190531 19:21:14.411"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="pagelet_basic"]/div/ul/li[2]/div/div[2]/div/div/span</arg>
+</arguments>
+<assign>
+<var>${Geslacht}</var>
+</assign>
+<msg timestamp="20190531 19:21:16.645" level="INFO">${Geslacht} = Vrouw</msg>
+<status status="PASS" starttime="20190531 19:21:14.411" endtime="20190531 19:21:16.645"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://li/div/div[2]/div/div/span[contains(text(),'1') or contains(text(),'2')]</arg>
+</arguments>
+<assign>
+<var>${Datum}</var>
+</assign>
+<msg timestamp="20190531 19:21:18.888" level="INFO">${Datum} = 31 mei 1969</msg>
+<status status="PASS" starttime="20190531 19:21:16.645" endtime="20190531 19:21:18.888"></status>
+</kw>
+<kw name="Split Datum" library="Facebook_Keywords">
+<arguments>
+<arg>${Datum}</arg>
+</arguments>
+<assign>
+<var>${GeboorteJaar}</var>
+</assign>
+<msg timestamp="20190531 19:21:18.888" level="INFO">${GeboorteJaar} = 1969</msg>
+<status status="PASS" starttime="20190531 19:21:18.888" endtime="20190531 19:21:18.888"></status>
+</kw>
+<kw name="Get Time" library="BuiltIn">
+<doc>Returns the given time in the requested format.</doc>
+<arguments>
+<arg>year</arg>
+<arg>NOW</arg>
+</arguments>
+<assign>
+<var>${SysteemJaar}</var>
+</assign>
+<msg timestamp="20190531 19:21:18.889" level="INFO">${SysteemJaar} = 2019</msg>
+<status status="PASS" starttime="20190531 19:21:18.888" endtime="20190531 19:21:18.889"></status>
+</kw>
+<kw name="Leeftijd Bepalen" library="Facebook_Keywords">
+<arguments>
+<arg>${SysteemJaar}</arg>
+<arg>${GeboorteJaar}</arg>
+</arguments>
+<assign>
+<var>${Leeftijd}</var>
+</assign>
+<msg timestamp="20190531 19:21:18.889" level="INFO">${Leeftijd} = 50</msg>
+<status status="PASS" starttime="20190531 19:21:18.889" endtime="20190531 19:21:18.889"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://span[@data-testid='profile_name_in_profile_page']/a</arg>
+</arguments>
+<assign>
+<var>${Naam}</var>
+</assign>
+<msg timestamp="20190531 19:21:21.104" level="INFO">${Naam} = Toetsen Bord</msg>
+<status status="PASS" starttime="20190531 19:21:18.889" endtime="20190531 19:21:21.104"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${Geslacht}' == 'Man'</arg>
+<arg>log to console</arg>
+<arg>Vandaag is ${Naam} jarig! Hij is een '${TypeVriend}' van jou en wordt ${Leeftijd} jaar.</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:21:21.104" endtime="20190531 19:21:21.105"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${Geslacht}' == 'Vrouw'</arg>
+<arg>log to console</arg>
+<arg>Vandaag is ${Naam} jarig! Zij is een '${TypeVriend}' van jou en wordt ${Leeftijd} jaar.</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Vandaag is ${Naam} jarig! Zij is een '${TypeVriend}' van jou en wordt ${Leeftijd} jaar.</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:21:21.105" endtime="20190531 19:21:21.105"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:21:21.105" endtime="20190531 19:21:21.105"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${Leeftijd}' == '50'</arg>
+<arg>Abraham_Sarah afbeelding uploaden</arg>
+<arg>${Geslacht}</arg>
+<arg>ELSE IF</arg>
+<arg>'${TypeVriend}' == 'Kennis' and '${Leeftijd}' != '50'</arg>
+<arg>run keyword</arg>
+<arg>Standaard afbeelding uploaden</arg>
+<arg>ELSE IF</arg>
+<arg>'${TypeVriend}' == 'Vriend' and '${Leeftijd}' != '50'</arg>
+<arg>run keyword</arg>
+<arg>Algemeen bericht schrijven</arg>
+<arg>ELSE IF</arg>
+<arg>'${TypeVriend}' == 'Goede Vriend' and '${Leeftijd}' != '50'</arg>
+<arg>run keyword</arg>
+<arg>Persoonlijk bericht schrijven</arg>
+<arg>ELSE</arg>
+<arg>run keyword</arg>
+<arg>log</arg>
+<arg>Vriend feliciteren is mislukt.</arg>
+</arguments>
+<kw name="Abraham_Sarah afbeelding uploaden" library="Facebook_Resources">
+<arguments>
+<arg>${Geslacht}</arg>
+</arguments>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1sec</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:21:21.106" endtime="20190531 19:21:21.107"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@data-tab-key='timeline']</arg>
+</arguments>
+<msg timestamp="20190531 19:21:21.107" level="INFO">Clicking link 'xpath://a[@data-tab-key='timeline']'.</msg>
+<status status="PASS" starttime="20190531 19:21:21.107" endtime="20190531 19:21:25.446"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[@data-contents='true']</arg>
+</arguments>
+<msg timestamp="20190531 19:21:25.447" level="INFO">Clicking element 'xpath://div[@data-contents='true']'.</msg>
+<status status="PASS" starttime="20190531 19:21:25.446" endtime="20190531 19:21:27.920"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${Geslacht}' == 'Man'</arg>
+<arg>log to console</arg>
+<arg>Abraham afbeelding wordt geplaatst...</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:21:27.920" endtime="20190531 19:21:27.921"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${Geslacht}' == 'Vrouw'</arg>
+<arg>log to console</arg>
+<arg>Sarah afbeelding wordt geplaatst...</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Sarah afbeelding wordt geplaatst...</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:21:27.921" endtime="20190531 19:21:27.922"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:21:27.921" endtime="20190531 19:21:27.922"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${Geslacht}' == 'Man'</arg>
+<arg>Choose file</arg>
+<arg>//input[@name='composer_photo[]']</arg>
+<arg>C://Users/Klaar/OneDrive/Bureaublad/Facebook_Scripts/FB_Abraham.jpg</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:21:27.922" endtime="20190531 19:21:27.922"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${Geslacht}' == 'Vrouw'</arg>
+<arg>Choose file</arg>
+<arg>//input[@name='composer_photo[]']</arg>
+<arg>C://Users/Klaar/OneDrive/Bureaublad/Facebook_Scripts/FB_Sarah.jpg</arg>
+</arguments>
+<kw name="Choose File" library="SeleniumLibrary">
+<doc>Inputs the ``file_path`` into file input field ``locator``.</doc>
+<arguments>
+<arg>//input[@name='composer_photo[]']</arg>
+<arg>C://Users/Klaar/OneDrive/Bureaublad/Facebook_Scripts/FB_Sarah.jpg</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:21:27.923" endtime="20190531 19:21:30.361"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:21:27.922" endtime="20190531 19:21:30.361"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>30sec</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:21:30.361" endtime="20190531 19:21:31.367"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://button[.='Plaatsen']</arg>
+</arguments>
+<msg timestamp="20190531 19:21:31.368" level="INFO">Clicking button 'xpath://button[.='Plaatsen']'.</msg>
+<status status="PASS" starttime="20190531 19:21:31.367" endtime="20190531 19:21:36.878"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${Geslacht}' == 'Man'</arg>
+<arg>log to console</arg>
+<arg>Afbeelding voor jarige Abraham is succesvol geplaatst.</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:21:36.878" endtime="20190531 19:21:36.878"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${Geslacht}' == 'Vrouw'</arg>
+<arg>log to console</arg>
+<arg>Afbeelding voor jarige Sarah is succesvol geplaatst.</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Afbeelding voor jarige Sarah is succesvol geplaatst.</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:21:36.879" endtime="20190531 19:21:36.879"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:21:36.878" endtime="20190531 19:21:36.879"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${Geslacht}' == 'Man'</arg>
+<arg>log Many</arg>
+<arg>Afbeelding voor jarige Abraham is succesvol geplaatst.</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:21:36.879" endtime="20190531 19:21:36.879"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${Geslacht}' == 'Vrouw'</arg>
+<arg>log Many</arg>
+<arg>Afbeelding voor jarige Sarah is succesvol geplaatst.</arg>
+</arguments>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>Afbeelding voor jarige Sarah is succesvol geplaatst.</arg>
+</arguments>
+<msg timestamp="20190531 19:21:36.880" level="INFO">Afbeelding voor jarige Sarah is succesvol geplaatst.</msg>
+<status status="PASS" starttime="20190531 19:21:36.880" endtime="20190531 19:21:36.880"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:21:36.880" endtime="20190531 19:21:36.880"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:21:21.106" endtime="20190531 19:21:36.880"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:21:21.106" endtime="20190531 19:21:36.880"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:21:04.276" endtime="20190531 19:21:36.880"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Vriend ${i} van ${Count_Vandaag_Jarig} is gefeliciteerd.</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:21:36.880" endtime="20190531 19:21:36.881"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>Vriend ${i} van ${Count_Vandaag_Jarig} is gefeliciteerd.</arg>
+</arguments>
+<msg timestamp="20190531 19:21:36.881" level="INFO">Vriend 3 van 3 is gefeliciteerd.</msg>
+<status status="PASS" starttime="20190531 19:21:36.881" endtime="20190531 19:21:36.881"></status>
+</kw>
+<kw name="Evenementen Verjaardagen" library="Facebook_Resources">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1sec</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:21:36.882" endtime="20190531 19:21:36.882"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@data-tab-key='about']</arg>
+</arguments>
+<msg timestamp="20190531 19:21:36.882" level="INFO">Clicking link 'xpath://a[@data-tab-key='about']'.</msg>
+<status status="PASS" starttime="20190531 19:21:36.882" endtime="20190531 19:21:41.214"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@data-testid='nav_contact_basic']</arg>
+</arguments>
+<msg timestamp="20190531 19:21:41.214" level="INFO">Clicking link 'xpath://a[@data-testid='nav_contact_basic']'.</msg>
+<status status="PASS" starttime="20190531 19:21:41.214" endtime="20190531 19:21:44.498"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@title='Ga naar de Facebook-startpagina']</arg>
+</arguments>
+<msg timestamp="20190531 19:21:44.498" level="INFO">Clicking link 'xpath://a[@title='Ga naar de Facebook-startpagina']'.</msg>
+<status status="PASS" starttime="20190531 19:21:44.498" endtime="20190531 19:21:47.780"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@data-testid='left_nav_item_Evenementen']</arg>
+</arguments>
+<msg timestamp="20190531 19:21:47.780" level="INFO">Clicking link 'xpath://a[@data-testid='left_nav_item_Evenementen']'.</msg>
+<status status="PASS" starttime="20190531 19:21:47.780" endtime="20190531 19:21:51.281"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[@data-key='birthdays']/a</arg>
+</arguments>
+<msg timestamp="20190531 19:21:51.281" level="INFO">Clicking link 'xpath://div[@data-key='birthdays']/a'.</msg>
+<status status="PASS" starttime="20190531 19:21:51.281" endtime="20190531 19:21:54.740"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:21:36.881" endtime="20190531 19:21:54.740"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:21:00.261" endtime="20190531 19:21:54.740"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:18:48.553" endtime="20190531 19:21:54.740"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:18:48.552" endtime="20190531 19:21:54.740"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:18:48.551" endtime="20190531 19:21:54.740"></status>
+</kw>
+<kw name="Uitloggen en browser sluiten" library="Facebook_Resources">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1sec</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:21:54.742" endtime="20190531 19:21:54.742"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@id='pageLoginAnchor']</arg>
+</arguments>
+<msg timestamp="20190531 19:21:54.742" level="INFO">Clicking link 'xpath://a[@id='pageLoginAnchor']'.</msg>
+<status status="PASS" starttime="20190531 19:21:54.742" endtime="20190531 19:21:58.046"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@role='menuitem'][.='Afmelden']</arg>
+</arguments>
+<msg timestamp="20190531 19:21:58.046" level="INFO">Clicking link 'xpath://a[@role='menuitem'][.='Afmelden']'.</msg>
+<status status="PASS" starttime="20190531 19:21:58.046" endtime="20190531 19:22:01.310"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20190531 19:22:01.310" endtime="20190531 19:22:02.977"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:21:54.742" endtime="20190531 19:22:02.977"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Uiloggen en browser sluiten.</arg>
+</arguments>
+<status status="PASS" starttime="20190531 19:22:02.979" endtime="20190531 19:22:02.980"></status>
+</kw>
+<status status="PASS" starttime="20190531 19:18:26.532" endtime="20190531 19:22:02.982" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20190531 19:18:21.643" endtime="20190531 19:22:02.985"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Facebook VriendenFeliciterenVerjaardag">Facebook VriendenFeliciterenVerjaardag</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
